@@ -1,0 +1,39 @@
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/pattern.svg');
+}
+
+.input-todo {
+  @include flexCenter-spaceBetween;
+  width: 580px;
+  height: 60px;
+  margin: 10px auto;
+  border: $border;
+  border-radius: $border-radius;
+  background-color: $secondary-color-yeelowgreen;
+  box-shadow: $box-shadow;
+
+  input {
+    font-family: $primary-font;
+    font-size: $font-size;
+    margin: 10px;
+    padding: 0 5px;
+    width: 500px;
+    height: 30px;
+    border: $border;
+    box-shadow: $box-shadow;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

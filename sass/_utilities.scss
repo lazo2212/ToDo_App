@@ -1,0 +1,9 @@
+.container {
+  @include flexCenter;
+  width: 600px;
+  margin: 10% auto;
+  background-color: $primary-color-lighterblue;
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}

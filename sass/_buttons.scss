@@ -1,0 +1,22 @@
+%button {
+  display: inline-block;
+  border: $border;
+  border-radius: $border-radius;
+  font-family: $primary-font;
+  font-weight: 700;
+  padding: 6px 10px;
+  margin: 0 10px;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background-color: $primary-color-lighterblue;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.button {
+  @extend %button;
+}

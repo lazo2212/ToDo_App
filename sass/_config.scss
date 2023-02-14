@@ -2,6 +2,9 @@
 
 // VARIABLES
 $dark-color: #14110f;
+$light-color: #ddddff;
+$red-color: #ff0000;
+$green-color: #00ff00;
 $primary-color-darkblue: #006e90;
 $primary-color-lighterblue: #41bbd9;
 $primary-color-lightblue: #adcad6;
@@ -10,7 +13,7 @@ $primary-font: 'Poppins', sans-serif;
 $font-size: 20px;
 $border: 3px solid $dark-color;
 $border-radius: 10px;
-$box-shadow: 5px 5px 5px $dark-color;
+$box-shadow: 3px 3px $dark-color;
 
 @mixin flexCenter {
   display: flex;

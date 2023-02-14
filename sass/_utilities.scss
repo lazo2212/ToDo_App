@@ -7,3 +7,12 @@
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 }
+
+.button-container {
+  @include flexCenter;
+  flex-direction: row;
+
+  span {
+    width: 20px;
+  }
+}

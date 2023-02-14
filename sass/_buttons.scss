@@ -4,6 +4,7 @@
   border-radius: $border-radius;
   font-family: $primary-font;
   font-weight: 700;
+  height: 40px;
   padding: 6px 10px;
   margin: 0 10px;
   box-shadow: $box-shadow;
@@ -19,4 +20,24 @@
 
 .button {
   @extend %button;
+}
+
+.delete {
+  color: $red-color;
+  margin: 0 5px;
+
+  &:hover {
+    color: $dark-color;
+    background-color: $red-color;
+  }
+}
+
+.done {
+  color: $green-color;
+  margin: 0 5px;
+
+  &:hover {
+    color: $dark-color;
+    background-color: $green-color;
+  }
 }

@@ -1,6 +1,4 @@
-@import 'config';
-@import 'utilities';
-@import 'buttons';
+@import 'config', 'utilities', 'buttons';
 
 * {
   margin: 0;
@@ -26,7 +24,7 @@ body {
     font-family: $primary-font;
     font-size: $font-size;
     margin: 10px;
-    padding: 0 5px;
+    padding: 5px;
     width: 500px;
     height: 30px;
     border: $border;
@@ -35,5 +33,32 @@ body {
     &:focus {
       outline: none;
     }
+  }
+}
+
+.popup {
+  width: 580px;
+  min-height: 50px;
+  margin: 5px auto;
+  padding: 5px;
+  border: $border;
+  border-radius: $border-radius;
+  background-color: $primary-color-darkblue;
+  box-shadow: $box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $light-color;
+    font-family: $primary-font;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
   }
 }

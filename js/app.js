@@ -5,6 +5,8 @@ const container = document.querySelector('.container');
 
 class PopupContainer {
   constructor(stringMessage) {
+    this.localStorage = localStorage;
+    this.nodeList = container.childNodes;
     this.stringMessage = stringMessage;
     this.div = document.createElement('div');
     this.paragraph = document.createElement('p');
@@ -18,6 +20,7 @@ class PopupContainer {
   appendToContainer() {
     container.appendChild(this.div);
     this.div.classList.add('popup');
+    this.div.dataset.id = `${this.nodeList.length}`;
     this.div.appendChild(this.paragraph);
     this.paragraph.textContent = this.stringMessage;
     this.div.appendChild(this.buttonContainer);
@@ -35,6 +38,14 @@ class PopupContainer {
     this.deleteSpan.classList.add('material-symbols-outlined');
     this.deleteSpan.textContent = ' delete ';
   }
+
+  addToLocalStorage() {
+    this.localStorage.setItem(`${this.nodeList.length}`, this.stringMessage);
+  }
+
+  removeFromLocalStorage(itemForRemove) {
+    this.localStorage.removeItem(itemForRemove);
+  }
 }
 
 const popupContainer = new PopupContainer();
@@ -46,11 +57,13 @@ submitBtn.addEventListener('click', () => {
   } else {
     const popupContainer = new PopupContainer(inputField.value);
     popupContainer.appendToContainer();
+    popupContainer.addToLocalStorage();
     inputField.value = '';
   }
+  console.log(popupContainer);
 });
 
-// check
+// strikethrough todo text with doneBtn
 container.addEventListener('click', (event) => {
   if (event.target.classList[0] === 'input') {
     return;
@@ -68,8 +81,16 @@ container.addEventListener('click', (event) => {
   if (event.target.classList[0] === 'input') {
     return;
   } else if (event.target.firstChild.innerHTML === ' delete ') {
+    popupContainer.removeFromLocalStorage(
+      event.target.parentElement.parentElement.dataset.id
+    );
     event.target.parentElement.parentElement.remove();
   } else if (event.target.innerHTML === ' delete ') {
+    popupContainer.removeFromLocalStorage(
+      event.target.parentElement.parentElement.parentElement.dataset.id
+    );
     event.target.parentElement.parentElement.parentElement.remove();
   } else return;
 });
+
+console.log(popupContainer);

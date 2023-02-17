@@ -58,14 +58,15 @@ function createTask(tasksArray) {
 }
 
 container.addEventListener('click', (e) => {
-  // console.log(e.target.parentNode.parentNode.getAttribute('id'));
   const newTasksArray = tasks.filter(
     (element) =>
       element.id !== parseInt(e.target.parentNode.parentNode.getAttribute('id'))
   );
   localStorage.setItem('tasks', JSON.stringify(newTasksArray));
-  console.log(e.target.innerHTML === ' delete ');
+
   if (e.target.className === 'button delete') {
     e.target.parentNode.parentNode.remove();
+  } else if (e.target.parentNode.className === 'button delete') {
+    e.target.parentNode.parentNode.parentNode.remove();
   }
 });

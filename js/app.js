@@ -45,7 +45,8 @@ function createTask(tasksArray) {
           done
           </span>
         </button>
-        <button class="button delete"><span class="material-symbols-outlined">
+        <button class="button delete">
+          <span class="material-symbols-outlined">
           delete
           </span>
         </button>
@@ -56,7 +57,15 @@ function createTask(tasksArray) {
   container.appendChild(todo);
 }
 
-const deleteBtn = document.querySelector('.delete');
-deleteBtn.addEventListener('click', (e) => {
-  console.log(e.target);
+container.addEventListener('click', (e) => {
+  // console.log(e.target.parentNode.parentNode.getAttribute('id'));
+  const newTasksArray = tasks.filter(
+    (element) =>
+      element.id !== parseInt(e.target.parentNode.parentNode.getAttribute('id'))
+  );
+  localStorage.setItem('tasks', JSON.stringify(newTasksArray));
+  console.log(e.target.innerHTML === ' delete ');
+  if (e.target.className === 'button delete') {
+    e.target.parentNode.parentNode.remove();
+  }
 });

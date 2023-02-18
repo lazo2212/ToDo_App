@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/pattern.svg");
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 600px;
-  margin: 10% auto;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 5% auto;
   background-color: #41bbd9;
   border: 3px solid #14110f;
   border-radius: 10px;
@@ -59,21 +70,11 @@
   background-color: #00ff00;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url("/pattern.svg");
-}
-
 .input-todo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 580px;
+  width: 95%;
   height: 60px;
   margin: 10px auto;
   border: 3px solid #14110f;
@@ -85,9 +86,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   margin: 10px;
-  padding: 16px;
-  width: 500px;
-  height: 30px;
+  padding: 16px 10px;
+  width: 95%;
+  height: 75%;
   border: 3px solid #14110f;
   box-shadow: 3px 3px #14110f;
 }
@@ -95,18 +96,20 @@ body {
   outline: none;
 }
 
+.todo-container {
+  width: 95%;
+}
+
 .popup {
-  width: 580px;
-  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 5px auto;
   padding: 5px;
   border: 3px solid #14110f;
   border-radius: 10px;
   background-color: #006e90;
   box-shadow: 3px 3px #14110f;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .popup:last-child {
   margin-bottom: 10px;

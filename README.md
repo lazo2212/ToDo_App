@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple steps.
    ```
 2. Download ZIP
 
-   Click <a href="https://github.com/lazo2212/ToDo_App"> <font color="gree">**<>Code** </font> </a> button and click <a href="https://github.com/lazo2212/ToDo_App/archive/refs/heads/master.zip"> **Download ZIP** </a>
+   Click <a style="color: #1cff00" href="https://github.com/lazo2212/ToDo_App">**<>Code**</a> button and click <a href="https://github.com/lazo2212/ToDo_App/archive/refs/heads/master.zip"> **Download ZIP** </a>
 
 <br>
 

@@ -28,7 +28,7 @@ A simple todo app built with **HTML**, **SCSS** and **JavaScript** in a retro st
 
 ## Getting Started
 
-To try the application, you need to clone the repository or download the ZIP file or try it [here](https://lazo2212.github.io/ToDo_App/).
+To try the application, you need to clone the repository or download the ZIP file.
 To get a local copy up and running follow these simple steps.
 
 <br>

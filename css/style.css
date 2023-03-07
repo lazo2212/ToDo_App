@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("/pattern.svg");
+  background-image: url("../pattern.svg");
 }
 
 .container {
